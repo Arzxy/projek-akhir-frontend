@@ -1,0 +1,143 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    background: #0082ba;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Layout utama */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Card section */
+section {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    margin-bottom: 12px;
+    color: #34495e;
+    font-size: 1.2rem;
+}
+
+/* Form style */
+form div {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border 0.2s;
+}
+
+input:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Tombol umum */
+button {
+    padding: 8px 12px;
+    margin: 6px 4px 0 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Tombol spesifik */
+#bookFormSubmit {
+    background: #27ae60;
+    color: #fff;
+}
+
+#searchSubmit {
+    background: #2980b9;
+    color: #fff;
+}
+
+[data-testid="bookItemIsCompleteButton"] {
+    background: #27ae60;
+    color: white;
+}
+
+[data-testid="bookItemDeleteButton"] {
+    background: #c0392b;
+    color: white;
+}
+
+[data-testid="bookItemEditButton"] {
+    background: #f39c12;
+    color: white;
+}
+
+/* Card item buku */
+[data-testid="bookItem"] {
+    padding: 12px;
+    margin-bottom: 14px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+[data-testid="bookItem"] h3 {
+    margin-bottom: 6px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    section {
+        padding: 12px;
+    }
+}
